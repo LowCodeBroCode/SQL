@@ -68,7 +68,6 @@ GROUP BY type;
 
 /* Count each category from the genres column */
 
-sql
 WITH genre_split AS (
     SELECT TRIM(BOTH ' ' FROM LOWER(unnest(string_to_array(genres, ',')))) as genre
     FROM imdb_data
